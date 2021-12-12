@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BusavailableComponent } from './busavailable/busavailable.component';
+import { TicketbookingsComponent } from './ticketbookings/ticketbookings.component';
+import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { LogoutComponent } from './logout/logout.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+const routes: Routes = [
+  {path:'home',component:HomeComponent},
+  {path:'profile',component:ProfileComponent},
+  {path:'busavailable',component:BusavailableComponent},
+  {path:'ticketbookings',component:TicketbookingsComponent},
+  {path:'upcommingbuses',component:UpcommingbusesComponent},
+  {path:'changepassword',component:ChangepasswordComponent},
+  {path:'logout',component:LogoutComponent},
+  {path:'pagenotfound',component:PagenotfoundComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
