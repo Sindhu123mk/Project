@@ -11,6 +11,8 @@ import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.compone
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { LogoutComponent } from './logout/logout.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LogoutComponent } from './logout/logout.component';
     UpcommingbusesComponent,
     PagenotfoundComponent,
     ChangepasswordComponent,
-    LogoutComponent
+    LogoutComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

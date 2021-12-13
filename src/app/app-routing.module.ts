@@ -9,6 +9,10 @@ import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.compone
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+
+
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'profile',component:ProfileComponent},
@@ -17,7 +21,9 @@ const routes: Routes = [
   {path:'upcommingbuses',component:UpcommingbusesComponent},
   {path:'changepassword',component:ChangepasswordComponent},
   {path:'logout',component:LogoutComponent},
-  {path:'pagenotfound',component:PagenotfoundComponent}
+  {path:'pagenotfound',component:PagenotfoundComponent},
+  {path:'login',component:LoginComponent},
+  {path:'registration',component:RegistrationComponent}
 ];
 
 @NgModule({
