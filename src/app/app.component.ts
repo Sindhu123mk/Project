@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
    <li> <a routerLink="changepassword" routerLinkActive="active">Change Password</a></li>
    <li> <a routerLink="logout" routerLinkActive="active">Logout</a></li>
    <li> <a routerLink="pagenotfound" routerLinkActive="active">Page Not Found</a></li>
-
+   <li> <a routerLink="signup" routerLinkActive="active">Sign Up</a></li>
 
 
 

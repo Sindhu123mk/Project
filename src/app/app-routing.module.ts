@@ -11,6 +11,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent},
   {path:'pagenotfound',component:PagenotfoundComponent},
   {path:'login',component:LoginComponent},
-  {path:'registration',component:RegistrationComponent}
+  {path:'registration',component:RegistrationComponent},
+  {path:'signup',component:SignupComponent}
 ];
 
 @NgModule({
