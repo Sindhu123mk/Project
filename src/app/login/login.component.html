@@ -1,17 +1,28 @@
 
-<h1>  Login Form </h1>  
-<form>  
-  <style>
-    h1,h2{
-      text-align: center;
-    }
-  </style>
-       <h2>
-       <label>Email_ID : </label>   
-        <input type="text" placeholder="Enter EmailID" name="Email" required><br>  
-        <label>Password : </label>   
-        <input type="password" placeholder="Enter Password" name="password" required> <br> 
-        <div><button type="submit">Login</button> </div><br> 
-            <a href="#"> Forgot password</a>   
-      </h2>
-</form>     
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  
+      
+  <label for="userid">User ID</label>
+  
+  <input  placeholder="Enter User ID" formControlName="userid" type="text" class="form-control">
+  <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
+      <div *ngIf="f['userid'].errors && f['userid'].errors['required']">Userid is required.</div>
+  </div><br>
+
+  <label for="password">Password</label>
+
+  <input type="password" placeholder="Enter Password" formControlName="password"id="password" type="text" class="form-control">
+  <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+      <div *ngIf="f['password'].errors && f['password'].errors['required']">password is required.</div>
+      <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Name should be 6 character.</div>
+  </div><br>
+
+<br>
+
+  
+  <button type="submit"  [disabled]="form.invalid" >Login</button>
+  
+
+
+</form>

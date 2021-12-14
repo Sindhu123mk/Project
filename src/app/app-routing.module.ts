@@ -6,9 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BusavailableComponent } from './busavailable/busavailable.component';
 import { TicketbookingsComponent } from './ticketbookings/ticketbookings.component';
 import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.component';
-import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { LogoutComponent } from './logout/logout.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
@@ -20,9 +18,7 @@ const routes: Routes = [
   {path:'busavailable',component:BusavailableComponent},
   {path:'ticketbookings',component:TicketbookingsComponent},
   {path:'upcommingbuses',component:UpcommingbusesComponent},
-  {path:'changepassword',component:ChangepasswordComponent},
   {path:'logout',component:LogoutComponent},
-  {path:'pagenotfound',component:PagenotfoundComponent},
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'signup',component:SignupComponent}

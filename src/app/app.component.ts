@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
   <div> <h3>My Dashboard </h3></div>
   <div style="padding:5px">
   <ul class="nav nav-tabs">
+   <li> <a routerLink="login" routerLinkActive="active"> Login </a></li>
    <li> <a routerLink="home" routerLinkActive="active"> Home</a></li>
    <li> <a routerLink="profile" routerLinkActive="active">Profile</a></li>
    <li> <a routerLink="busavailable" routerLinkActive="active">BusesAvailable</a></li>
    <li> <a routerLink="ticketbookings" routerLinkActive="active">Tickets Bookings</a></li>
    <li> <a routerLink="upcommingbuses" routerLinkActive="active">Upcomming Buses</a></li>
-   <li> <a routerLink="changepassword" routerLinkActive="active">Change Password</a></li>
    <li> <a routerLink="logout" routerLinkActive="active">Logout</a></li>
-   <li> <a routerLink="pagenotfound" routerLinkActive="active">Page Not Found</a></li>
    <li> <a routerLink="signup" routerLinkActive="active">Sign Up</a></li>
+  
 
 
 
