@@ -13,6 +13,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegistrationComponent } from './registration/registration.component';
     ChangepasswordComponent,
     LogoutComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
