@@ -18,3 +18,9 @@
     font: size 80px;
     
 }
+marquee{
+    text-shadow: 1px 1px rgb(205, 241, 44);
+    color:rgb(86, 23, 231);
+    text-indent: 100px;
+    font-weight: bolder;
+}

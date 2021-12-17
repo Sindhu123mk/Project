@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-import { BusavailableComponent } from './busavailable/busavailable.component';
+
 import { TicketbookingsComponent } from './ticketbookings/ticketbookings.component';
 import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.component';
 
@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
 import { PaymentComponent } from './payment/payment.component';
+import { MyDashBoardComponent } from './my-dash-board/my-dash-board.component';
+import { BusComponent } from './bus/bus.component';
+import { TicketfareComponent } from './ticketfare/ticketfare.component';
 
 
 
@@ -22,7 +25,7 @@ import { PaymentComponent } from './payment/payment.component';
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    BusavailableComponent,
+    BusComponent,
     TicketbookingsComponent,
     UpcommingbusesComponent,
   
@@ -30,7 +33,9 @@ import { PaymentComponent } from './payment/payment.component';
     LoginComponent,
     RegistrationComponent,
     SignupComponent,
-    PaymentComponent
+    PaymentComponent,
+    MyDashBoardComponent,
+    TicketfareComponent
   
   ],
   imports: [
