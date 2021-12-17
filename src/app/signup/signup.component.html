@@ -13,18 +13,37 @@
                 <input formControlName="lastname" type="text" class="form-control">
                 <small *ngIf="lastname.invalid && lastname.touched" class="text-danger">LastName is Required</small> 
               </div>
-              <div class="form-group">
-                <label class="col-form-label">Email:</label>
-                <input formControlName="email" type="text" class="form-control" >
-                <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
-              </div>
+
               <div class="form-group">
                 <label class="col-form-label">Phone:</label>
                 <input formControlName="phone" type="text" class="form-control" >
                 <small *ngIf="phone.invalid && phone.touched" class="text-danger">Phone no is Required(minimum length 10,numbers are only allowed)</small>
               </div>
               
-              <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">SignUp</button>
+              <div class="form-group">
+                <label class="col-form-label">Email:</label>
+                <input formControlName="email" type="text" class="form-control" >
+                <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
+              </div>
+
+              <div class="form-group">
+                <label class="col-form-label">Password:</label>
+                <input formControlName="password" type="text" class="form-control" >
+                <small *ngIf="password.invalid && password.touched" class="text-danger"> password is Required</small>
+              </div>
+
+              
+              <div class="form-group">
+                <label class="col-form-label">Confirm Password:</label>
+                <input formControlName="cp" type="text" class="form-control" >
+                <small *ngIf="cp.invalid && cp.touched" class="text-danger"> password is Required</small>
+              </div>
+
+              <br>
+              <div class=btn>
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">SignUp</button>
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">   Cancel</button>
+              </div>
             </form>
       </div>
   </div>

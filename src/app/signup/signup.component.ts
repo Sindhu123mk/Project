@@ -14,6 +14,8 @@ export class SignupComponent implements OnInit {
       'firstname' : new FormControl(null, Validators.required),
       'lastname' : new FormControl(null, Validators.required),
       'email' : new FormControl(null, [Validators.required, Validators.email]),
+      'password':new FormControl(null,[Validators.required]),
+      'cp':new FormControl(null,[Validators.required]),
       'phone' : new FormControl(
         null,
         [
@@ -37,6 +39,15 @@ export class SignupComponent implements OnInit {
     get email() {
       return this.exform.get('email');
     }
+
+    get password() {
+      return this.exform.get('password');
+    }
+    
+    get cp() {
+      return this.exform.get('cp');
+    }
+    
     get phone() {
       return this.exform.get('phone');
     }
