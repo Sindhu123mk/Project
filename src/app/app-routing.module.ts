@@ -14,14 +14,21 @@ import { PaymentComponent } from './payment/payment.component';
 import { MyDashBoardComponent } from './my-dash-board/my-dash-board.component';
 import { BusComponent } from './bus/bus.component';
 import { TicketfareComponent } from './ticketfare/ticketfare.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 const routes: Routes = [
+  {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'profile',component:ProfileComponent},
   {path:'bus',component:BusComponent},
   {path:'ticketbookings',component:TicketbookingsComponent},
   {path:'upcommingbuses',component:UpcommingbusesComponent},
-  {path:'My_DashBoard',component:MyDashBoardComponent},
+  {path:'dashboard',component:MyDashBoardComponent ,children:[
+    {path: '', component: ProfileComponent},
+    {path: 'profile', component: ProfileComponent},
+    {path: 'booking', component: TicketbookingsComponent},
+    {path: 'changepass', component: ChangePasswordComponent}
+  ]},
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'signup',component:SignupComponent},

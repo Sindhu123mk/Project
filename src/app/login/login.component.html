@@ -16,8 +16,11 @@
               </div>
               <br>
               <div class=btn>
-                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">Login</button>
-                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">   Cancel</button>
+                <button (click)="clicksub('login')"  type="button" class="btn btn-primary">Login</button>
+                &nbsp;
+                <button (click)="clicksub('Cancel')"  type="button" class="btn btn-primary">   Cancel</button>
+                &nbsp;
+                <button (click)="clicksub('signup')"  type="button" class="btn btn-primary">   Sign Up</button>
               </div>
             </form>
       </div>

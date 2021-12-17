@@ -1,26 +1,33 @@
-.bg{
-    background-color: gray;
-    padding: 10px; 
-    margin: 10px;
-    text-align: center;
-    margin-left: 400px;
-    margin-right: 500px;
+.bg {
+  background-color: darkblue;
+  padding: 50px;
+  margin: 10px;
+  text-align: center;
+  margin: auto;
+  width: 70%;
 }
-.btn{
-    
-    background-color: lightskyblue;
+.btn {
+  background-color: lightskyblue;
 }
-.plan{
-    
-    
-    color: green;
-    text-align: center;
-    font: size 80px;
-    
+.plan {
+  color: green;
+  text-align: center;
+  font: size 80px;
 }
-marquee{
-    text-shadow: 1px 1px rgb(205, 241, 44);
-    color:rgb(86, 23, 231);
-    text-indent: 100px;
-    font-weight: bolder;
+marquee {
+  text-shadow: 1px 1px rgb(205, 241, 44);
+  color: rgb(86, 23, 231);
+  text-indent: 100px;
+  font-weight: bolder;
+}
+
+label{
+  color: aliceblue;
+  font-weight: 700;
+}
+.card{
+
+padding: 10px;
+border: 10px;
+outline: 3px solid grey;
 }
