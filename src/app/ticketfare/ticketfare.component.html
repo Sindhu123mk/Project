@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>Booked Details</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Buses Available</th>
+    <th>Depart</th>
+    <th>Arrival</th>
+    <th>Seattype</th>
+    <th>Fare</th>
+  </tr>
+  <tr>
+    <td> <select name="BusName" id="names">
+        <option value="VRL">VRL Bus</option>
+        <option value="RedBus">Red Bus</option>
+        <option value="SRS">SRS Travels</option>
+        <option value="Vijaya">Vijaya Motors</option>
+        <option value="Irawata">Irawata Bus</option>
+     </select></td>
+    <td><input type="time">Depart</td>
+    <td><input type="time">Arrival</td>
+    <td> <select name="SeatType" id="SeatType">
+       
+        <option value="WindowSide" >WindowSideSeat</option>
+        <option value="3 Seater" >3 Seater</option>
+        <option value="Sleeper">Sleeper</option>
+        <option value="AC">AC </option>
+        <option value="FirstClass">FirstClass</option>
+        <option value="SecondClass">SecondClass</option>
+     </select></td>
+    <td > <select name="fare" id="fare">
+       
+        <option value="description" >Description</option>
+        <option value="Conviniencefee" >Conviniencefee</option>
+        <option value="totalfee">Totalfee</option>
+        <button type="book" style="margin: 5px;"> book</button>
+     </select>
+    </td>
+  </tr>
+ 
+</table>
+</body>
+</html>

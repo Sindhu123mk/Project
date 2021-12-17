@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BusavailableComponent } from './busavailable.component';
+import { MyDashBoardComponent } from './my-dash-board.component';
 
-describe('BusavailableComponent', () => {
-  let component: BusavailableComponent;
-  let fixture: ComponentFixture<BusavailableComponent>;
+describe('MyDashBoardComponent', () => {
+  let component: MyDashBoardComponent;
+  let fixture: ComponentFixture<MyDashBoardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BusavailableComponent ]
+      declarations: [ MyDashBoardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BusavailableComponent);
+    fixture = TestBed.createComponent(MyDashBoardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

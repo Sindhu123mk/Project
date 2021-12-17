@@ -6,7 +6,10 @@
     margin: 0 -16px;
     
   }
-  
+  h2
+  {
+    text-decoration-color: brown;
+  }
   
   
   .col-50 {
@@ -70,14 +73,14 @@
       position: relative;
       font-family: Arial;
     }
-    
-    /* .custom-select select {
+/*     
+    .custom-select select {
       display: none; /hide original SELECT element:/
     } */
     
-    /* .select-selected {
+    .select-selected {
       background-color: DodgerBlue;
-    } */
+    }
     
     /* /style the arrow inside the select element:/
     .select-selected:after {
@@ -89,9 +92,9 @@
       height: 0;
       border: 6px solid transparent;
       border-color: #fff transparent transparent transparent;
-    } */
+    }
     
-    /* /point the arrow upwards when the select box is open (active):/
+    /point the arrow upwards when the select box is open (active):/
     .select-selected.select-arrow-active:after {
       border-color: transparent transparent #fff transparent;
       top: 7px;
@@ -130,12 +133,7 @@
       text-align: center;
     }
   
-  /* body{
+  body{
       background-color: gray;
       text-align: center;
-  }
-   */
-  h2
-  {
-    text-decoration-color: brown;
   }

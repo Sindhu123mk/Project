@@ -1,34 +1,32 @@
-<div>
-    <h1>Registration Form</h1>
+
+<div class="container pt-5">
+  <div class="row justify-content-sm-center pt-5">
+      <div class="col-sm-6 shadow round pb-3">
+        <h1 class="text-center pt-3 text-secondary">Registration</h1>
+          <form [formGroup]="exform">
+              <div class="form-group">
+                <label class="col-form-label">First Name:</label>
+                <input formControlName="firstname" type="text" class="form-control">
+                <small *ngIf="firstname.invalid && firstname.touched" class="text-danger">First Name is Required</small> 
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Last Name:</label>
+                <input formControlName="lastname" type="text" class="form-control">
+                <small *ngIf="lastname.invalid && lastname.touched" class="text-danger">LastName is Required</small> 
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Email:</label>
+                <input formControlName="email" type="text" class="form-control" >
+                <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Phone:</label>
+                <input formControlName="phone" type="text" class="form-control" >
+                <small *ngIf="phone.invalid && phone.touched" class="text-danger">Phone no is Required(minimum length 10,numbers are only allowed)</small>
+              </div>
+              
+              <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">SignUp</button>
+            </form>
+      </div>
+  </div>
 </div>
-    <form>
-        <div class="container">
-          <label for="FName"><b>FirstName</b></label>
-          <input type="text" placeholder="Enter FirstName" name="FName"><br>
-      
-          <label for="LName"><b>LastName</b></label>
-          <input type="text" placeholder="Enter LastName" name="LName"><br>
-      
-          <label for="pn"><b>PhoneNumber</b></label>
-          <input type="tel" placeholder="Enter PhoneNumber" name="pn"><br>
-
-          <label for="email"><b>Email_ID</b></label>
-          <input type="email" placeholder="Enter Email_ID" name="email"><br>
-      
-                
-          <label for="pswd"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="Pswd"><br>
-
-
-          <label for="cpsw"><b>Confirm Password</b></label>
-          <input type="password" placeholder="Enter Password" name="cpsw"><br>
-            
-
-          <label for="gender"><b>Gender:</b></label><br>
-          <input type="radio" name="gender" value="male"> Male<br>
-          <input type="radio" name="gender" value="female"> Female<br>
-          <input type="radio" name="gender" value="other"> Other<br>
-
-          <button type="submit">Register</button>
-        </div>
-      </form>
