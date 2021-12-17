@@ -9,28 +9,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private router:Router) {
+  exform: FormGroup;
+  ngOnInit(){
+    this.exform=new FormGroup({
+      'email': new FormControl(null,[Validators.required,Validators.email]),
+      'password':new FormControl(null,[Validators.required])
+      
+    })
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  clicksub(){
+    console.log(this.exform.value);
+    this.exform.reset();
   }
-ngOnit(): void {
-}
-
-form=new FormGroup(
-  {
-
-    userid:new FormControl('', [Validators.required]),
-    password:new FormControl('',[Validators.required,Validators.minLength(5)]),
-
+  get email(){
+    return this.exform.get('email');
   }
-);
-
-get f(){
-  return this.form.controls;
+  get password(){
+    return this.exform.get('password')
+  }
 }
 
-submit(){
-  console.log(this.form.value);
-}
-}
+   
+    
+  

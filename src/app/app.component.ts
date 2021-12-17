@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   template: `
@@ -7,17 +8,21 @@ import { Component } from '@angular/core';
   <div> <h3>My Dashboard </h3></div>
   <div style="padding:5px">
   <ul class="nav nav-tabs">
-   <li> <a routerLink="login" routerLinkActive="active"> Login </a></li>
-   <li> <a routerLink="registration" routerLinkActive="active"> Registration</a></li>
-   <li> <a routerLink="home" routerLinkActive="active"> Home</a></li>
-   <li> <a routerLink="profile" routerLinkActive="active">Profile</a></li>
-   <li> <a routerLink="busavailable" routerLinkActive="active">BusesAvailable</a></li>
-   <li> <a routerLink="ticketbookings" routerLinkActive="active">Tickets Bookings</a></li>
-   <li> <a routerLink="upcommingbuses" routerLinkActive="active">Upcomming Buses</a></li>
-   <li> <a routerLink="logout" routerLinkActive="active">Logout</a></li>
+  <li> <a routerLink="home" routerLinkActive="active"> Home </a></li><br></ul>
+  <li> <a routerLink="Payment" routerLinkActive="active">Payment Details</a></li>
+  <li> <a routerLink="login" routerLinkActive="active">login</a></li>
+  <li> <a routerLink="signup" routerLinkActive="active">signup</a></li>
+  <li> <a routerLink="profile" routerLinkActive="active">Profile</a></li>
+  <li> <a routerLink="ticketbookings" routerLinkActive="active">Ticket Booking</a></li>
+  <li> <a routerLink="upcomingbuses" routerLinkActive="active">Upcomingbuses</a></li>
+  <li> <a routerLink="busavailable" routerLinkActive="active">busavailable</a></li>
+
   
 
-  </ul>
+
+  
+
+  
   <router-outlet></router-outlet>
 
   </div>
@@ -25,7 +30,7 @@ import { Component } from '@angular/core';
   
   
   
-  
+ 
   
   
   

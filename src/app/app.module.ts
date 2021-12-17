@@ -9,10 +9,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { BusavailableComponent } from './busavailable/busavailable.component';
 import { TicketbookingsComponent } from './ticketbookings/ticketbookings.component';
 import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.component';
-import { LogoutComponent } from './logout/logout.component';
+
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
+import { PaymentComponent } from './payment/payment.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,10 +26,12 @@ import { SignupComponent } from './signup/signup.component';
     TicketbookingsComponent,
     UpcommingbusesComponent,
   
-    LogoutComponent,
+    
     LoginComponent,
     RegistrationComponent,
-    SignupComponent
+    SignupComponent,
+    PaymentComponent
+  
   ],
   imports: [
     BrowserModule,
