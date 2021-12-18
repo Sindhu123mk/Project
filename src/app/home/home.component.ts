@@ -16,24 +16,10 @@ export class HomeComponent implements OnInit {
   submit(){
     console.log(this.form.value);
   }
-  onSubmit() {​​​​​​​
-    this.router.navigate(['/login'])
-    }​​​​​​​​​​​​​​
-    onSubmit1() {​​​​​​​
-      this.router.navigate(['/signup'])
-      
-      }​​​​​​​​​​​​​​
-      onSubmit2() {​​​​​​​
-        this.router.navigate(['/registration'])
-        
-        }​​​​​​​​​​​​​​
-        onSubmit3() {​​​​​​​
-          this.router.navigate(['/upcomingbuses'])
-          
-          }​​​​​​​​​​​​​​
-          onSubmit4() {​​​​​​​
-            this.router.navigate(['/bus'])
-            
-            }​​​​​​​​​​​​​​
+ 
+
+  navigateBus(){
+    this.router.navigateByUrl('/bus')
+  }
 
 }

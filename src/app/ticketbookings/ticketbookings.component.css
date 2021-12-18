@@ -7,6 +7,14 @@
     
   }
   
+  .btn{
+    font-weight: 700;
+  }
+  .btn:hover{
+    color: white;
+    font-weight: 700;
+    background-color: rgb(40, 182, 238);
+  }
   
   
   .col-50 {

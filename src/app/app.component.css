@@ -1,0 +1,28 @@
+
+.nav-list {
+    display: flex;
+  }
+  nav{
+    background-color: darkblue;
+    width: 100%;
+  }
+  
+  li{
+      margin  : 20px 20px  ;
+  }
+  li{
+    list-style: none;
+  }
+  a{
+      text-decoration: none;
+      font-weight: 600;
+  }
+  li > a {
+    color: white;
+  }
+  li,
+  a,
+  ul {
+    background-color: darkblue;
+  }
+  

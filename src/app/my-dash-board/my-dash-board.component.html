@@ -1,5 +1,12 @@
- <form for="my-dash-board" (onSubmit)="submit()"> 
- <button  type="submit" (click)=" onSubmit()" style="padding: 3px; width: 60px; margin:0px 0px 0px 1150px ; display: grid;" >Profile</button><br>
-<br>
- <button  type="submit" (click)=" onSubmit1()"  style="padding: 3px; width: 60px;margin:0px 0px 0px 1150px ; display: grid;">Bus  </button>
- 
+
+<nav>
+    <div class="nav-tiltle"></div>
+    <div class="navbar">
+      <ul class="nav-list">
+        <li><a routerLink="profile">My profile </a></li>
+        <li><a routerLink="booking">Booking </a></li>
+        <li><a routerLink="changepass"> Change Password</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
