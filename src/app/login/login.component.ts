@@ -22,10 +22,13 @@ export class LoginComponent implements OnInit {
   }
   clicksub(next){
     if(next==='Cancel'){
-      this.router.navigateByUrl('/home')
+    this.router.navigateByUrl('/home')
     }
-    if(next==='login'){
+    if(next==='login' && this.exform.value.email && this.exform.value.password){
       this.router.navigateByUrl('/dashboard/booking')
+    }
+    else{
+      alert("Please Enter valid details");
     }
     if(next === 'signup'){
       this.router.navigateByUrl('/signup')

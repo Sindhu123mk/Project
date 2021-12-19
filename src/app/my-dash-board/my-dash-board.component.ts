@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Form ,FormControl,FormGroup} from '@angular/forms';
+import { Form, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-my-dash-board',
@@ -10,21 +10,18 @@ import { Form ,FormControl,FormGroup} from '@angular/forms';
 export class MyDashBoardComponent implements OnInit {
   form: any;
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  submit(){
+  submit() {
     console.log(this.form.value);
   }
-  onSubmit() {​​​​​​​
+  onSubmit() {
     this.router.navigate(['/profile'])
-    }​​​​​​​​​​​​​​
-    
-    onSubmit1() {​​​​​​​
-      this.router.navigate(['/bus'])
-      
-      }​​​​​​​​​​​​​​
-      
-    
+  }
+
+  onSubmit1() {
+    this.router.navigate(['/bus'])
+  }
 }

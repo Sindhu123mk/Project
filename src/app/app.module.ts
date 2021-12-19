@@ -18,6 +18,7 @@ import { MyDashBoardComponent } from './my-dash-board/my-dash-board.component';
 import { BusComponent } from './bus/bus.component';
 import { TicketfareComponent } from './ticketfare/ticketfare.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { SeatPlanComponent } from './seat-plan/seat-plan.component';
 
 
 
@@ -37,7 +38,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     PaymentComponent,
     MyDashBoardComponent,
     TicketfareComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    SeatPlanComponent
   
   ],
   imports: [

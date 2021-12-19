@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'signup',component:SignupComponent},
-  {path:'Payment',component:PaymentComponent},
+  {path:'payment',component:PaymentComponent},
   {path:'ticketfare',component:TicketfareComponent}
 ];
 
