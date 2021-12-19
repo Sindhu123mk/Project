@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-
-import { TicketbookingsComponent } from './ticketbookings/ticketbookings.component';
+import { BookingComponent } from './booking/booking.component';
 import { UpcommingbusesComponent } from './upcommingbuses/upcommingbuses.component';
 
 import { LoginComponent } from './login/login.component';
@@ -21,18 +20,18 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'profile',component:ProfileComponent},
   {path:'bus',component:BusComponent},
-  {path:'ticketbookings',component:TicketbookingsComponent},
+{   path:'booking',component:BookingComponent},
   {path:'upcommingbuses',component:UpcommingbusesComponent},
   {path:'dashboard',component:MyDashBoardComponent ,children:[
     {path: '', component: ProfileComponent},
     {path: 'profile', component: ProfileComponent},
-    {path: 'booking', component: TicketbookingsComponent},
-    {path: 'changepass', component: ChangePasswordComponent}
+
+    {path: 'changepassword', component: ChangePasswordComponent}
   ]},
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'signup',component:SignupComponent},
-  {path:'Payment',component:PaymentComponent},
+  {path:'payment',component:PaymentComponent},
   {path:'ticketfare',component:TicketfareComponent}
 ];
 

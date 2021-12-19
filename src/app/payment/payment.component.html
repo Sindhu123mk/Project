@@ -2,7 +2,19 @@
     <div class="row justify-content-sm-center pt-5">
         <div class="col-sm-6 shadow round pb-3">
           <h1 class="text-center pt-3 text-secondary">Payment Details</h1>
-            <form [formGroup]="exform">
+            <form [formGroup]="exform"  >
+              <div class="form-group">
+                <label class="col-form-label">Payment Id:</label>
+                <input formControlName="Payment_Id" type="number" class="form-control">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Amount:</label>
+                <input formControlName="Amount" type="number" class="form-control">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">Mode Of Payment:</label>
+                <input formControlName="Mode" type="text" class="form-control">
+              </div>
                 <div class="form-group">
                   <label class="col-form-label">Name On Card:</label>
                   <input formControlName="name" type="text" class="form-control">
@@ -11,14 +23,14 @@
                 
                 <div class="form-group">
                   <label class="col-form-label">Debit/Credit card number:</label>
-                  <input formControlName="credit" type="text" class="form-control" placeholder="16-Digits Number" >
+                  <input formControlName="credit" type="number" class="form-control" placeholder="16-Digits Number" >
                   <small *ngIf="credit.invalid && credit.touched" class="text-danger">Card number is Required(minimum length 16,numbers are only allowed)</small>
                   <small *ngIf="credit.invalid && credit.touched" class="text-danger">Card number is Required(maximum length 16,numbers are only allowed)</small>
                 </div><br>
 
                 <div class="form-group">
                     <label class="col-form-label">CVV:</label>
-                    <input formControlName="cvv" type="text" class="form-control" >
+                    <input formControlName="cvv" type="number" class="form-control" >
                     <small *ngIf="cvv.invalid && cvv.touched" class="text-danger">CVV is Required(minimum length 3,numbers are only allowed)</small>
                     <small *ngIf="cvv.invalid && cvv.touched" class="text-danger">CVV is Required(minimum length 3,numbers are only allowed)</small>
                    
@@ -27,21 +39,21 @@
 
                   <div class="form-group">
                     <label class="col-form-label">Exp Month::</label>
-                    <input formControlName="month" type="text" class="form-control">
+                    <input formControlName="month" type="date" class="form-control">
                     <small *ngIf="month.invalid && month.touched" class="text-danger">Month is Required</small> 
                   </div><br>
 
                   <div class="form-group">
                     <label class="col-form-label">ExpYear:</label>
-                    <input formControlName="ExpYear" type="text" class="form-control" >
+                    <input formControlName="ExpYear" type="number" class="form-control" >
                     <small *ngIf="ExpYear.invalid && ExpYear.touched" class="text-danger">Card number is Required(minimum length 4,numbers are only allowed)</small>
                     <small *ngIf="ExpYear.invalid && ExpYear.touched" class="text-danger">Card number is Required(maximum length 4,numbers are only allowed)</small>
                     
                   </div><br>
-
+                  <input type="button" class="btn" (click)="navigateticketfare()" value="paid" />      
                   
                 
-                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">coutinue</button>
+                
               </form>
         </div>
     </div>
