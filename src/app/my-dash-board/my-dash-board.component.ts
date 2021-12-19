@@ -21,7 +21,7 @@ export class MyDashBoardComponent implements OnInit {
     this.router.navigate(['/profile'])
     }​​​​​​​​​​​​​​
     
-    onSubmit1() {​​​​​​​
+  onSubmit1() {​​​​​​​
       this.router.navigate(['/bus'])
       
       }​​​​​​​​​​​​​​

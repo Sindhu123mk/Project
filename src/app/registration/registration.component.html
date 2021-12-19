@@ -16,16 +16,37 @@
               </div>
               <div class="form-group">
                 <label class="col-form-label">Email:</label>
-                <input formControlName="email" type="text" class="form-control" >
+                <input formControlName="email" type="email" class="form-control" >
                 <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
               </div>
               <div class="form-group">
                 <label class="col-form-label">Phone:</label>
-                <input formControlName="phone" type="text" class="form-control" >
+                <input formControlName="phone" type="number" class="form-control" >
                 <small *ngIf="phone.invalid && phone.touched" class="text-danger">Phone no is Required(minimum length 10,numbers are only allowed)</small>
               </div>
               
               <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">SignUp</button>
+              <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
+
+
+              <div class="row">  
+                <table>  
+                  <tr>  
+                    <td>firstname</td>  
+                    <td>lastname</td>  
+                    <td>email</td>  
+                    <td>phone</td>  
+                
+                  </tr>  
+                
+                  <tr *ngFor="let d of data">  
+                    <td>{{d.firstname}}</td>  
+                    <td>{{d.lastname}}</td>  
+                    <td>{{d.email}}</td>  
+                    <td>{{d.phone}}</td>  
+                  </tr>  
+                </table>  
+              </div>  
             </form>
       </div>
   </div>

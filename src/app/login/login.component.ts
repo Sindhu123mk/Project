@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule,Form} from '@angular/forms';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { map } from 'rxjs';
+import { Login } from '../login';
+import { LoginserveService } from '../loginserve.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,16 +13,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  title='Login Credentials';
   exform: FormGroup;
-  constructor(private router: Router){
+  constructor(private router: Router,private Serv:LoginserveService){
 
   }
-  ngOnInit(){
+
+  data:any;
+  LoginForm:FormGroup;
+  submitted=false;
+  EventValue: any = "Save";
+  ngOnInit() : void{
+    this.getdata();
     this.exform=new FormGroup({
-      'email': new FormControl(null,[Validators.required,Validators.email]),
+      'email': new FormControl(null,[Validators.required]),
       'password':new FormControl(null,[Validators.required])
       
     })
+  }
+  getdata(){
+    this.Serv.getData().subscribe((data: any[]) =>{
+      this.data = data;
+    })
+  }
+  Save(){
+    let d: Login = new Login();
+    d.email = this.LoginForm.value.email;
+    d.password = this.LoginForm.value.password;
+    console.log(this.LoginForm.value.email);
+    this.Serv.postData(d);
   }
   clicksub(next){
     if(next==='Cancel'){
