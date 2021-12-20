@@ -8,6 +8,7 @@ table, th, td {
 <body>
 
 <h2>Booked Details</h2>
+<form for="home">
 
 <table style="width:100%">
   <tr>
@@ -42,10 +43,15 @@ table, th, td {
         <option value="Conviniencefee" >Conviniencefee</option>
         <option value="totalfee">Totalfee</option>
         <button type="book" style="margin: 5px;"> book</button>
+
+        <h4> Thank you for Booking, Have a Safe Journey</h4>
      </select>
     </td>
   </tr>
  
 </table>
+<br>
+<button (click)="clicksub('home')"  type="button" class="btn btn-primary">Back </button> 
+</form>
 </body>
 </html>

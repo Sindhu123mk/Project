@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  form: any;
 
+  constructor(private router:Router) { }
   exform: FormGroup;
 
   ngOnInit() {
@@ -52,7 +56,17 @@ export class SignupComponent implements OnInit {
       return this.exform.get('phone');
     }
     
+    submit(){
+      console.log(this.form.value);
+    }
+   
   
+    navigatelogin(){
+      this.router.navigateByUrl('/login')
+    }
+    navigatehome(){
+      this.router.navigateByUrl('/home')
+    }
   
   }
 

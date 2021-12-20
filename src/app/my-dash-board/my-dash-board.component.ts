@@ -17,11 +17,18 @@ export class MyDashBoardComponent implements OnInit {
   submit() {
     console.log(this.form.value);
   }
-  onSubmit() {
-    this.router.navigate(['/profile'])
-  }
-
-  onSubmit1() {
-    this.router.navigate(['/bus'])
-  }
+  // onSubmit() {​​​​​​​
+  //   this.router.navigate(['/profile'])
+  //   }​​​​​​​​​​​​​​
+    
+  // onSubmit1() {​​​​​​​
+  //     this.router.navigate(['/bus'])
+      
+  //     }​​​​​​​​​​​​​​
+  //     onSubmit2() {​​​​​​​
+  //       this.router.navigate(['/login'])
+        
+  //       }​​​​​​​​​​​​​​
+        
+    
 }

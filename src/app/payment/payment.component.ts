@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl, Validators } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-
+   form:any;
   exform: FormGroup;
-
+  constructor(private router:Router) { }
   ngOnInit(){
   
    this.exform= new FormGroup({
@@ -50,5 +50,11 @@ get month() {
 }
 get ExpYear() {
   return this.exform.get('ExpYear');
+}
+submit(){
+  console.log(this.form.value);
+}
+navigateticketfare(){
+  this.router.navigateByUrl('/ticketfare')
 }
 }
