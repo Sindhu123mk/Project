@@ -51,7 +51,34 @@
                     
                   </div><br>
                   <input type="button" class="btn" (click)="navigateticketfare()" value="paid" />      
-                  
+                  <div>
+                    <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
+                  </div>
+                    <div class="row">  
+                      <table>  
+                        <tr>  
+                          <td>Payment_Id</td>  
+                          <td>Amount</td>  
+                          <td>Mode</td>  
+                          <td>Name</td>  
+                          <td>credit</td>  
+                          <td>cvv</td>  
+                          <td>month</td>  
+                          <td>ExpYear</td>
+                        </tr>  
+                      
+                        <tr *ngFor="let d of data">  
+                          <td>{{d.Payment_Id}}</td>  
+                          <td>{{d.Amount}}</td>  
+                          <td>{{d.Mode}}</td>  
+                          <td>{{d.name}}</td>  
+                          <td>{{d.credit}}</td>  
+                          <td>{{d.cvv}}</td>  
+                          <td>{{d.mont}}</td>  
+                          <td>{{d.ExpYear}}</td>  
+                        </tr>  
+                      </table>  
+                    </div>  
                 
                 
               </form>

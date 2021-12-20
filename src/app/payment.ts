@@ -7,4 +7,5 @@ export class Payment {
     cvv:number;
     month:Date;
     ExpYear:number;
+    name:string;
 }

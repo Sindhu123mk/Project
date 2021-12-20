@@ -8,7 +8,7 @@ import { Booking } from './booking';
   providedIn: 'root'
 })
 export class BookingserveService {
-  private basepath=''
+  private basepath='http://localhost:11505/api/Bookings'
   formdata:Booking = new Booking();
   constructor(private http: HttpClient) { }
   httpOptions = {
@@ -29,6 +29,7 @@ export class BookingserveService {
     obj.Schedule_Id=formdata.Schedule_Id;
     obj.Amount=formdata.Amount;
     obj.Email_Id=formdata.Email_Id;
+    obj.PhoneNumber= formdata.PhoneNumber;
     alert(obj.Booking_Id);
     return this.http.post(this.basepath,obj).subscribe(data => {
       console.log(data);

@@ -7,5 +7,6 @@ export class Bus {
     Destination:string;
     Departure_time:Time;
     Arrival_time:Time;
+  
     
 }

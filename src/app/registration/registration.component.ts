@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { map } from 'rxjs';
+import { Router } from '@angular/router';
 import { Registration } from '../registration';
 import { RegistrationserveService } from '../registrationserve.service';
 @Component({
@@ -11,9 +12,9 @@ import { RegistrationserveService } from '../registrationserve.service';
 })
 export class RegistrationComponent implements OnInit {
   title:'Registration';
-  constructor(private Serv: RegistrationserveService) { }
+  constructor(private Serv: RegistrationserveService,private router:Router) { }
   data: any;
-  RegistrationForm:FormGroup;
+  form:any;
   submitted = false;
   EventValue : any = "Save";
   exform: FormGroup;
@@ -40,17 +41,14 @@ export class RegistrationComponent implements OnInit {
     }
     Save(){
       let d: Registration = new Registration();
-      d.firstname = this.RegistrationForm.value.firstname;
-      d.lastname = this.RegistrationForm.value.lastname;
-      d.phone = this.RegistrationForm.value.phone;
-      d.email = this.RegistrationForm.value.email;
-      console.log(this.RegistrationForm.value.deptno);
+      d.firstname = this.exform.value.firstname;
+      d.lastname = this.exform.value.lastname;
+      d.phone = this.exform.value.phone;
+      d.email = this.exform.value.email;
+      console.log(this.exform.value.deptno);
       this.Serv.postData(d);
     }
-    clicksub() {
-      console.log(this.exform.value);
-      this.exform.reset();
-    }
+    
     get firstname() {
       return this.exform.get('firstname');
     }
@@ -62,6 +60,12 @@ export class RegistrationComponent implements OnInit {
     }
     get phone() {
       return this.exform.get('phone');
+    }
+    submit(){
+      console.log(this.form.value);
+    }
+    navigatelogin(){
+      this.router.navigateByUrl('/login')
     }
     
 }

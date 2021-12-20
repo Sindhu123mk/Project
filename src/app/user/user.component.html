@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-75">
       <div class="container">
-        <form action="a" >
+        <form action="a" [formGroup]="UserForm" (ngSubmit)="Save()">
   
           <div class="row">
             
@@ -43,6 +43,32 @@
               
             </div>
             <input type="button" class="btn" (click)="navigatehome()" value="Back" />     
+
+            <div>
+              <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
+            </div>
+              <div class="row">  
+                <table>  
+                  <tr>  
+                    <td>User_Id</td>  
+                    <td>UserName</td>  
+                    <td>PhoneNumber</td> 
+                   <td>Email_Id</td>  
+                   <td>Gender</td> 
+                   <td>Password</td>  
+                
+                  </tr>  
+                
+                  <tr *ngFor="let d of data">  
+                    <td>{{d.User_Id}}</td>  
+                    <td>{{d.UserName}}</td>  
+                    <td>{{d.PhoneNumber}}</td>  
+                    <td>{{d.Email_Id}}</td>  
+                    <td>{{d.Gender}}</td>  
+                    <td>{{d.Password}}</td>  
+                  </tr>  
+                </table>  
+              </div>  
         </form>
       </div>
     </div>

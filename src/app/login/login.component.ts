@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   data:any;
-  LoginForm:FormGroup;
+
   submitted=false;
   EventValue: any = "Save";
   ngOnInit() : void{
@@ -38,9 +38,9 @@ export class LoginComponent implements OnInit {
   }
   Save(){
     let d: Login = new Login();
-    d.email = this.LoginForm.value.email;
-    d.password = this.LoginForm.value.password;
-    console.log(this.LoginForm.value.email);
+    d.email = this.exform.value.email;
+    d.password = this.exform.value.password;
+    console.log(this.exform.value.email);
     this.Serv.postData(d);
   }
   clicksub(next){

@@ -8,7 +8,7 @@ import { Payment } from './payment';
   providedIn: 'root'
 })
 export class PaymentserveService {
-  private basepath=''
+  private basepath='http://localhost:11505/api/Payments'
   formdata:Payment = new Payment();
   constructor(private http: HttpClient) { }
   httpOptions = {
@@ -32,7 +32,7 @@ export class PaymentserveService {
     obj.cvv=formdata.cvv;
     obj.month=formdata.month;
     obj.ExpYear=formdata.ExpYear;
-   
+    obj.name=formdata.name;
    
     alert(obj.Payment_Id);
     return this.http.post(this.basepath,obj).subscribe(data => {

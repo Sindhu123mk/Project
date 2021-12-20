@@ -8,7 +8,7 @@ import { Bus } from './bus';
   providedIn: 'root'
 })
 export class BusserveService {
-  private basepath=''
+  private basepath='http://localhost:11505/api/Buses'
   formdata:Bus = new Bus();
   constructor(private http: HttpClient) { }
   httpOptions = {

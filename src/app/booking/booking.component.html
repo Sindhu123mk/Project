@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form for="ticketbookings" >
+      <form for="booking" [formGroup]="BookingForm" (ngSubmit)="Save()" >
         <div class="row">
           <div class="col-50">
          
@@ -40,15 +40,13 @@
               <option value="SecondClass">SecondClass</option>
             </select> -->
               <!-- <input type="button" class="btn" (click)="navigatepayment()" value="Pay" />     -->
-            <div class="row">
-              <div class="col-50">
-                <br />
-                <label for="pass">PhoneNumber</label>
+           
+                
+                <label for="PhoneNumber">PhoneNumber</label>
                 <input type="number" id="PhoneNumber" name="PhoneNumber" placeholder="PhoneNumber" /><br />
               
                   
-              </div>
-            </div>
+              
           </div>
         </div>
 
@@ -57,6 +55,34 @@
         
        
          <button (click)="clicksub('payment')"  type="button" class="btn btn-primary">Pay</button> 
+         <div>
+         <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
+        </div>
+         <div class="row">  
+          <table>  
+            <tr>  
+              <td>Booking_Id</td>  
+              <td>Booking_Date</td>  
+              <td>PhoneNumber</td>  
+              <td>Amount</td>  
+              <td>Schedule_Id</td>  
+              <td>Email_Id</td>  
+          
+            </tr>  
+          
+            <tr *ngFor="let d of data">  
+              <td>{{d.Booking_Id}}</td>  
+              <td>{{d.Booking_Date}}</td>  
+              <td>{{d.PhoneNumber}}</td>  
+              <td>{{d.Schedule_Id}}</td>  
+              <td>{{d.Amount}}</td>  
+              <td>{{d.Email_Id}}</td>  
+              
+              
+             
+            </tr>  
+          </table>  
+        </div>  
       </form>
     </div>
   </div>

@@ -8,7 +8,7 @@ import { Registration } from './registration';
   providedIn: 'root'
 })
 export class RegistrationserveService {
-  private basepath=''
+  private basepath='http://localhost:11505/api/Passengers'
   formdata:Registration = new Registration ();
   constructor(private http: HttpClient) { }
   httpOptions = {

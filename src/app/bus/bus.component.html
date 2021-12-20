@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-75">
         <div class="container">
-          <form action="a">
+          <form action="a" >
     
             <div class="row">
               
@@ -65,6 +65,32 @@
               <div class="btn">
                 <input type="button" class="btn" (click)="navigatebooking()" value="Search" />
               </div>
+              <div>
+                <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
+              </div>
+                <div class="row">  
+                  <table>  
+                    <tr>  
+                      <td>Bus_Id</td>  
+                      <td>BusName</td>  
+                      <td>Source</td>  
+                      <td>Destination</td>  
+                      <td>Arrival_time</td>  
+                      <td>Departure_time</td>  
+                      
+                    </tr>  
+                  
+                    <tr *ngFor="let d of data">  
+                      <td>{{d.Bus_Id}}</td>  
+                      <td>{{d.Bus_Name}}</td>  
+                      <td>{{d.Source}}</td>  
+                      <td>{{d.Destination}}</td>  
+                      <td>{{d.Arrival_time}}</td>  
+                      <td>{{d.Departure_time}}</td>  
+                     
+                    </tr>  
+                  </table>  
+                </div>  
             
           </form>
         </div>

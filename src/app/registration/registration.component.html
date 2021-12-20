@@ -25,10 +25,11 @@
                 <small *ngIf="phone.invalid && phone.touched" class="text-danger">Phone no is Required(minimum length 10,numbers are only allowed)</small>
               </div>
               
-              <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">SignUp</button>
+              <input type="button" class="btn" (click)="navigatelogin()" value="Back" />      
+                  
+                <div>
               <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
-
-
+            </div>
               <div class="row">  
                 <table>  
                   <tr>  

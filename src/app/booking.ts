@@ -5,4 +5,5 @@ export class Booking {
     Booking_Date:Date;
     Amount:number;
     Email_Id:string;
+    PhoneNumber:number
 }
