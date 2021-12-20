@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { BusComponent } from './bus/bus.component';
 import { TicketfareComponent } from './ticketfare/ticketfare.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { BookingserveService } from './bookingserve.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { BookingserveService } from './bookingserve.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

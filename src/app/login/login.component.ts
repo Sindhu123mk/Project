@@ -44,13 +44,13 @@ export class LoginComponent implements OnInit {
     this.Serv.postData(d);
   }
   clicksub(next){
-    if(next==='Cancel'){
+    if(next=='Cancel'){
       this.router.navigateByUrl('/home')
     }
-    if(next==='login'){
+    if(next=='login'){
       this.router.navigateByUrl('/dashboard/booking')
     }
-    if(next === 'signup'){
+    if(next == 'signup'){
       this.router.navigateByUrl('/signup')
     }
   }

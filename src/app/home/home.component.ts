@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,12 +10,20 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   form: any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private builder:FormBuilder) { 
+this.form=this.builder.group({
+  from:[null,Validators.required],
+  to:[null,Validators.required],
+  doj:[null,Validators.required],
+  dor:[null,Validators.required]
+})
+
+  }
 
   ngOnInit(): void {
   }
-  submit(){
-    console.log(this.form.value);
+  submit(home){
+    console.log(home);
   }
  
 

@@ -18,7 +18,9 @@ h3{
     margin: 0 -16px;
     
   }
-  
+  .btn{
+    background-color: skyblue;
+  }
   
   
   .col-50 {
