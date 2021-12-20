@@ -21,6 +21,7 @@ import { TicketfareComponent } from './ticketfare/ticketfare.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { BookingserveService } from './bookingserve.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SeatPlanComponent } from './seat-plan/seat-plan.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     PaymentComponent,
     MyDashBoardComponent,
     TicketfareComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    SeatPlanComponent
   
   ],
   imports: [

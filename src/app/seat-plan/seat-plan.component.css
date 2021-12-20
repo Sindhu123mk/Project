@@ -1,0 +1,9 @@
+.outerWrap{
+    width: 50%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+.seat{
+    margin: 0 auto;
+    margin-top: 20px;
+}

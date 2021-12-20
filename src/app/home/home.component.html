@@ -1,5 +1,5 @@
-<form for="home" #home="ngForm" (onSubmit)="submit(home)">
- 
+<form  #formRef="ngForm" (onSubmit)="submit(formRef)">
+
   <hr />
   <h2 class="text-center text-success">Online Tickets Booking</h2>
   <marquee>Safe Journey</marquee>
@@ -9,148 +9,129 @@
       <div class="col-sm-6">
         <div class="form-group">
           <label for="from" class="">From</label>
-          <input ngModel #from="ngModel" name="from" class="form-control" type="text" id="from" />
+          <input  #from="ngModel" name="From" class="form-control" type="text" id="from"  ngModel/>
         </div>
 
         <div class="form-group">
           <label for="doj" class="">Date of Journey</label>
-          <input ngModel #doj="ngModel" name="doj" class="form-control" type="date" id="doj" />
+          <input  #doj="ngModel" name="Doj" class="form-control" type="date" id="doj" ngModel />
         </div>
       </div>
       <div class="col-sm-6">
         <div class="form-group">
           <label for="to" class="">To</label>
-          <input ngModel #to="ngModel" name="to" class="form-control" type="text" id="to" name="to" />
+          <input  #to="ngModel" name="To" class="form-control" type="text" id="to" name="to" ngModel />
         </div>
         <div class="form-group">
           <label for="dor" class="">Date of Return</label>
-          <input ngModel #dor="ngModel" name="dor" class="form-control" type="date" id="dor" />
+          <input  #dor="ngModel" name="Dor" class="form-control" type="date" id="dor" ngModel/>
         </div>
       </div>
     </div>
-    <br /><br />
-
-    <input type="submit" class="btn" (click)="navigateBus()" value="Search Bus" />
-  </div>
-
-  <h1 class="plan">Plan a trip with us</h1>
-
-  <div class="container">
-    <div class="card-group">
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="100px"
-          height="300px"
-          src="https://images.unsplash.com/photo-1592635196078-9fdc757f27f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWdyYXxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Agra</h5>
-          <p class="card-text">
-            The city is famous for being the capital of the Mughal emperors from
-            1526 to 1658. It is a major tourist destination for its many
-            Mughal-era buildings such as Tāj Mahal, Agra Fort and Fatehpūr
-            Sikrī, all three of which are UNESCO World Heritage Sites.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="100px"
-          height="300px"
-          src="https://i.pinimg.com/originals/09/e4/98/09e4982e8e3d4629406070b59bcf9de0.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Kerala</h5>
-          <p class="card-text">
-            Kerala, a state situated on the tropical Malabar Coast of
-            southwestern India, is one of the most popular tourist destinations
-            in the country. Named as one of the ten paradises of the world by
-            National Geographic Traveler, Kerala is famous especially for its
-            ecotourism initiatives and beautiful backwaters
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="300px"
-          height="300px"
-          src="https://cdn.insuremytrip.com/resources/30987/travel-documents-to-remember.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Goa</h5>
-          <p class="card-text">
-            Goa is one of the most favorite destination among Indian tourists
-            due to its pristine beaches. Dotted with hundreds of impressive
-            beaches in Goa, the incredible coastline of more than 100 km offers
-            beautiful views and serenity where tourists enjoy and relax in the
-            Sun.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="card-group">
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="300px"
-          height="300px"
-          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/7f/77/2d/temple-big-shiva.jpg?w=500&h=300&s=1"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Karnataka</h5>
-          <p class="card-text">
-            Karnataka is primarily known for its Heritage destinations and its
-            Wildlife/ National Parks. Apart from that, it is also famous for its
-            magical hill stations, spectacular waterfalls, pilgrimage centres
-            and a 320km long coastline dotted with un-spoilt beaches.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="300px"
-          height="300px"
-          src="https://images.moneycontrol.com/static-mcnews/2021/06/Mumbai-street-road-770x433.jpg?impolicy=website&width=770&height=431"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Mumbai</h5>
-          <p class="card-text">
-            It has the highest number of millionaires and billionaires among all
-            cities in India. Mumbai is home to three UNESCO World Heritage
-            Sites: the Elephanta Caves, Chhatrapati Shivaji Maharaj Terminus,
-            and the city's distinctive ensemble of Victorian and Art Deco
-            buildings designed in the 19th and 20th centuries.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          class="card-img-top"
-          width="300px"
-          height="300px"
-          src="https://static.toiimg.com/photo/82010583.cms"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Dehli</h5>
-          <p class="card-text">
-            The distinguished city of Delhi is blessed with several gardens and
-            botanical houses which are again one of the features that Delhi is
-            famous for. The Garden of Five senses, the Lodi Gardens, the Buddha
-            Jayanti Park and Nehru Park are some of these gardens which have
-            made Delhi famous among nature lovers
-          </p>
-        </div>
-      </div>
-    </div>
+    <button type="submit" (click)="navigateBus()" class="btn mt-5" > Search for Bus </button>
   </div>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="plan">Plan a trip with us</h1>
+
+<div class="container">
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" width="100px" height="300px"
+        src="https://images.unsplash.com/photo-1592635196078-9fdc757f27f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWdyYXxlbnwwfHwwfHw%3D&w=1000&q=80"
+        alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Agra</h5>
+        <p class="card-text">
+          The city is famous for being the capital of the Mughal emperors from
+          1526 to 1658. It is a major tourist destination for its many
+          Mughal-era buildings such as Tāj Mahal, Agra Fort and Fatehpūr
+          Sikrī, all three of which are UNESCO World Heritage Sites.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" width="100px" height="300px"
+        src="https://i.pinimg.com/originals/09/e4/98/09e4982e8e3d4629406070b59bcf9de0.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Kerala</h5>
+        <p class="card-text">
+          Kerala, a state situated on the tropical Malabar Coast of
+          southwestern India, is one of the most popular tourist destinations
+          in the country. Named as one of the ten paradises of the world by
+          National Geographic Traveler, Kerala is famous especially for its
+          ecotourism initiatives and beautiful backwaters
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" width="300px" height="300px"
+        src="https://cdn.insuremytrip.com/resources/30987/travel-documents-to-remember.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Goa</h5>
+        <p class="card-text">
+          Goa is one of the most favorite destination among Indian tourists
+          due to its pristine beaches. Dotted with hundreds of impressive
+          beaches in Goa, the incredible coastline of more than 100 km offers
+          beautiful views and serenity where tourists enjoy and relax in the
+          Sun.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" width="300px" height="300px"
+        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/7f/77/2d/temple-big-shiva.jpg?w=500&h=300&s=1"
+        alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Karnataka</h5>
+        <p class="card-text">
+          Karnataka is primarily known for its Heritage destinations and its
+          Wildlife/ National Parks. Apart from that, it is also famous for its
+          magical hill stations, spectacular waterfalls, pilgrimage centres
+          and a 320km long coastline dotted with un-spoilt beaches.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" width="300px" height="300px"
+        src="https://images.moneycontrol.com/static-mcnews/2021/06/Mumbai-street-road-770x433.jpg?impolicy=website&width=770&height=431"
+        alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Mumbai</h5>
+        <p class="card-text">
+          It has the highest number of millionaires and billionaires among all
+          cities in India. Mumbai is home to three UNESCO World Heritage
+          Sites: the Elephanta Caves, Chhatrapati Shivaji Maharaj Terminus,
+          and the city's distinctive ensemble of Victorian and Art Deco
+          buildings designed in the 19th and 20th centuries.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" width="300px" height="300px" src="https://static.toiimg.com/photo/82010583.cms"
+        alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Dehli</h5>
+        <p class="card-text">
+          The distinguished city of Delhi is blessed with several gardens and
+          botanical houses which are again one of the features that Delhi is
+          famous for. The Garden of Five senses, the Lodi Gardens, the Buddha
+          Jayanti Park and Nehru Park are some of these gardens which have
+          made Delhi famous among nature lovers
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

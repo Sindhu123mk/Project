@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,26 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  form: any;
+  myForm: FormGroup;
 
-  constructor(private router:Router,private builder:FormBuilder) { 
-this.form=this.builder.group({
-  from:[null,Validators.required],
-  to:[null,Validators.required],
-  doj:[null,Validators.required],
-  dor:[null,Validators.required]
-})
-
+  constructor(private router: Router, private builder: FormBuilder) {
+    this.myForm = this.builder.group({
+      from: [null, Validators.required],
+      to: [null, Validators.required],
+      doj: [null, Validators.required],
+      dor: [null, Validators.required]
+    })
   }
 
   ngOnInit(): void {
   }
-  submit(home){
+  submit(home) {
     console.log(home);
   }
- 
-
-  navigateBus(){
+  navigateBus() {
     this.router.navigateByUrl('/bus')
   }
 
